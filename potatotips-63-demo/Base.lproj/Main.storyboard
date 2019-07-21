@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="potatotips_63_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tpa-PD-4AG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FruitTableViewCell" id="WTf-HY-d3A" customClass="FruitTableViewCell" customModule="potatotips_63_demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WTf-HY-d3A" id="RVr-ZQ-1lw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ばなな" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkr-tR-Emh">
+                                                    <rect key="frame" x="24" y="11.5" width="52" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bkr-tR-Emh" firstAttribute="leading" secondItem="RVr-ZQ-1lw" secondAttribute="leadingMargin" constant="4" id="BJa-sl-7Bo"/>
+                                                <constraint firstItem="bkr-tR-Emh" firstAttribute="centerY" secondItem="RVr-ZQ-1lw" secondAttribute="centerY" id="Maw-Ei-tgY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fruitLabel" destination="bkr-tR-Emh" id="CiF-lC-y73"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knl-JT-DL5">
+                                <rect key="frame" x="184" y="632" width="46" height="30"/>
+                                <state key="normal" title="りんご"/>
+                                <connections>
+                                    <action selector="didTapAppleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MK1-Oc-RVH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9z-8U-FJ5">
+                                <rect key="frame" x="108" y="632" width="46" height="30"/>
+                                <state key="normal" title="ばなな"/>
+                                <connections>
+                                    <action selector="didTapBananaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pir-u2-2de"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ea-xO-NoG">
+                                <rect key="frame" x="260" y="632" width="46" height="30"/>
+                                <state key="normal" title="みかん"/>
+                                <connections>
+                                    <action selector="didTapOrangeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LAw-51-wzo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Ea-xO-NoG" firstAttribute="leading" secondItem="Knl-JT-DL5" secondAttribute="trailing" constant="30" id="2qi-HP-2H1"/>
+                            <constraint firstItem="R9z-8U-FJ5" firstAttribute="centerY" secondItem="Knl-JT-DL5" secondAttribute="centerY" id="58t-zy-2k2"/>
+                            <constraint firstItem="Knl-JT-DL5" firstAttribute="leading" secondItem="R9z-8U-FJ5" secondAttribute="trailing" constant="30" id="74d-Ww-MWn"/>
+                            <constraint firstItem="Knl-JT-DL5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7d1-6u-Ibu"/>
+                            <constraint firstItem="tpa-PD-4AG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DOz-Rc-F0g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Knl-JT-DL5" secondAttribute="bottom" constant="200" id="FRn-fM-QbK"/>
+                            <constraint firstItem="tpa-PD-4AG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HWx-Ma-nwm"/>
+                            <constraint firstItem="Knl-JT-DL5" firstAttribute="top" secondItem="tpa-PD-4AG" secondAttribute="bottom" constant="40" id="Mbv-qw-Wkn"/>
+                            <constraint firstItem="tpa-PD-4AG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NEy-Je-CUM"/>
+                            <constraint firstItem="6Ea-xO-NoG" firstAttribute="centerY" secondItem="Knl-JT-DL5" secondAttribute="centerY" id="fCv-5S-1Ke"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="fruitsTableView" destination="tpa-PD-4AG" id="x00-sf-jIz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+</document>
